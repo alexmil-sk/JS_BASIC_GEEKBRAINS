@@ -183,6 +183,8 @@ body {
 	padding: 0 40px;
 	color: $Maroon;
 	line-height: 30px;
+	border: 1px solid #000;
+	margin-bottom: 20px;
 	.bold {
 		font-weight: 700;
 		color: $Blue_;
@@ -191,5 +193,27 @@ body {
 		margin-bottom: 20px;
 		margin-top: 20px;
 		color: Black;
+	}
+}
+
+.answer {
+	background-color: $Khaki;
+	
+}
+
+.answerBtn {
+	font-size: 14px;
+	color:$DimGray;
+	width: 147px;
+	height: 50px;
+	box-shadow: 0 0 15px #000;
+	border-radius: 6px;
+	background: url(../img/button_3_link.png) no-repeat;
+	&:hover {
+		background: url(../img/button_3_hover.png) no-repeat;
+		font-size: 0;
+	}
+	&:active {
+		background: url(../img/button_3_press.png) no-repeat;
 	}
 }
