@@ -161,7 +161,7 @@
 				var quantity = 0;<br>
 				var name = 'В корзине находится товар следующих наименований: ';<br>
 				for (var item of basket) {<br>
-				sum += item.price;<br>
+				sum += (item.price * item.count);<br>
 				quantity += item.count;<br>
 				name += '(' + item.title + ') ';<br>
 				}<br>
