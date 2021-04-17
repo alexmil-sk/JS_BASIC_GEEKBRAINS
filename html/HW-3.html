@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Подключение файла JS скриптов -->
-	<script defer src="js/script.js"></script>
+	<script defer src="../js/script.js"></script>
 	<!-- Подключение jQuery -->
 	<script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<title>Домашнее задание №3</title>
@@ -45,28 +45,28 @@
 				<p class="bold">1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
 				</p>
 				<script>
-				function primeNumbers() {
-					var setOfNumbers = +prompt('Введите конечное значение числового ряда от 2 до 100 для вывода простых чисел');
-					while(setOfNumbers <= 1) {
-						alert('Конечное значение числового ряда не может быть меньше, чем 2');
-						setOfNumbers = +prompt('Введите конечное значение числового ряда от 2 до 100 для вывода простых чисел');
-					}
-
-					var i = 2;
-					var primeArr = [];
-					while (i <= setOfNumbers) {
-						if (i == 2 || i == 3 || i == 5 || i == 7) {
-							primeArr.push(" " + i);
-							i++
-							continue;
-						} else if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0 || i % 7 == 0) {
-							i++;
-							continue;
+					function primeNumbers() {
+						var setOfNumbers = +prompt('Введите конечное значение числового ряда от 2 до 100 для вывода простых чисел');
+						while(setOfNumbers <= 1) {
+							alert('Конечное значение числового ряда не может быть меньше, чем 2');
+							setOfNumbers = +prompt('Введите конечное значение числового ряда от 2 до 100 для вывода простых чисел');
 						}
-						primeArr.push(" " + i++);
+
+						var i = 2;
+						var primeArr = [];
+						while (i <= setOfNumbers) {
+							if (i == 2 || i == 3 || i == 5 || i == 7) {
+								primeArr.push(" " + i);
+								i++
+								continue;
+							} else if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0 || i % 7 == 0) {
+								i++;
+								continue;
+							}
+							primeArr.push(" " + i++);
+						}
+						document.getElementById('question-1').innerHTML = primeArr;
 					}
-					document.getElementById('question-1').innerHTML = primeArr;
-				}
 
 				</script>
 				<button type="button" onclick="primeNumbers()" class="answerBtn">Запуск скрипта</button>
@@ -126,7 +126,7 @@
 					var quantity = 0;
 					var name = 'В корзине находится товар следующих наименований: ';
 					for (var item of basket) {
-						sum += item.price;
+						sum += (item.price * item.count);
 						quantity += item.count;
 						name += '(' + item.title + ') ';
 
@@ -161,7 +161,7 @@
 				var quantity = 0;<br>
 				var name = 'В корзине находится товар следующих наименований: ';<br>
 				for (var item of basket) {<br>
-				sum += item.price;<br>
+				sum += (item.price * item.count);<br>
 				quantity += item.count;<br>
 				name += '(' + item.title + ') ';<br>
 				}<br>
