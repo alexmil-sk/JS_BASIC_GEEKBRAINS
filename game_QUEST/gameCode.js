@@ -219,7 +219,7 @@ while (userAnswer == '' || userAnswer == 0 || isNaN(userAnswer)) {
 if (userAnswer <= 3) {
 	var aUserAnswer = userAnswer;
 	var qUserAnswer = --userAnswer;
-	console.log(questions[qUserAnswer] + '\nВаш ответ на ' +
+	alert(questions[qUserAnswer] + '\nВаш ответ на ' +
 		aUserAnswer + ' вопрос: ' + answerText[qUserAnswer]);
 	} else {
 		alert('Вы ввели некорректный номер вопроса');
