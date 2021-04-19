@@ -1,0 +1,21 @@
+
+<div></div>
+
+<script>
+	var table = document.createElement('table');
+	var array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+
+	for (var i = 0; i < 8; i++) {
+			var tr = document.createElement('tr');
+			table.append(tr);
+			for (var j = 0; j < 8; j++) {
+			var td = document.createElement('td');
+			//td.innerText = i * j;
+			//td.innerHTML = '&#9816;';
+			td.innerText = array[i];
+			tr.append(td);
+		}
+	}
+
+	document.querySelector('div').append(table);
+</script>
