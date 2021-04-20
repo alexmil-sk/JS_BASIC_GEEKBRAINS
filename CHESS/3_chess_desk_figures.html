@@ -5,33 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CHESS DESK FIGURES</title>
-	<style>
-	.back-home {
-		width: 88px;
-		height: 28px;
-		display: block;
-		float: left;
-		margin: 20px;
-		padding: 15px;
-		font-size: 25px;
-		color: white;
-		border-radius: 20px;
-		background-color: #A52A2A;
-		box-shadow: 3px 3px 10px brown;
-		text-align: center;
-		text-decoration: none;
-	}
-	.back-home:hover {
-			background-color: #cc3636;
-			color: white;
-			box-shadow: 3px 3px 10px crimson;
-	}
-	.back-home:active {
-			background-color: #e18787;
-			color: white;
-			box-shadow: 0 0 20px #6e0f22;
-	}
-	</style>
+	<link rel="stylesheet" href="../css/chess.css">
+	<link rel="stylesheet" href="../css/chess.css">
 </head>
 <body>
 	<a class="back-home" href="../html/HW-5.html">to HW-5</a>
@@ -47,55 +22,28 @@
 		var chessPawnBlack = ['&#9823;'];		
 
 		function chessDesk() {
-			for (var i = 0; i < 10; ++i) {
-				var tr = document.createElement('tr');
-				table.append(tr);
-				table.style.border = '5px solid black';
-				table.style.backgroundColor = "#EEB771";
-				for (var j = 0; j < 10; ++j) {
-					var td = document.createElement('td');					
-					td.style.width = '107px';
-					td.style.height = '105px';
-					td.style.textAlign = 'center';
-					td.style.fontSize = '80px';
-					tr.append(td);
-					td.innerHTML = (i + 1) + j;
+				for (var i = 0; i < 10; ++i) {
+					var tr = document.createElement('tr');
+					table.append(tr);
+					for (var j = 0; j < 10; ++j) {
+						var td = document.createElement('td');
+						//td.style.fontSize = '80px';
+						tr.append(td);
+						td.innerHTML = (i + 1) + j;
 
-					if (j == 0 || j == 9) {//Первая и последняя вертикальные столбцы координат
-						td.style.width = '30px';
-					} else if (td.innerHTML % 2 == 0) {
-						td.style.backgroundColor = "#8E3918";
-					} 
+						if (td.innerHTML % 2 == 0) {
+							td.style.backgroundColor = "#8E3918";
+						}
 
-					if (i == 9 && 0 <= j <= 9) { // Первая и последняя буквенные строки координат
-						td.innerHTML = array[j];
-						td.style.color = 'white'
-						td.style.height = '30px';
-						td.style.fontSize = '30px';
-						td.style.textAlign = 'center';
-						td.style.textTransform = 'uppercase';
-						td.style.backgroundColor = "#A95D21";
-					} else if (i == 0 && 0 <= j <= 9){
-						td.innerHTML = array[j];
-						td.style.color = 'white'
-						td.style.height = '30px';
-						td.style.fontSize = '30px';
-						td.style.textAlign = 'center';
-						td.style.textTransform = 'uppercase';
-						td.style.backgroundColor = "#A95D21";
-						td.style.transform = 'rotate(180deg)';
-					} else if (i <= 8 && j == 0) {
-						td.innerHTML = reverseNumber[i];
-						td.style.color = 'white'
-						td.style.fontSize = '30px';
-						td.style.backgroundColor = "#A95D21";
-					} else if (i <= 8 && j == 9) {
-						td.innerHTML = reverseNumber[i];
-						td.style.color = 'white'
-						td.style.fontSize = '30px';
-						td.style.backgroundColor = "#A95D21";
-						td.style.transform = 'rotate(180deg)';
-					} else if (i == 1 && 1 <= j && j < 9) {
+						if (i == 9 && 0 <= j <= 9) { // Последняя буквенная строка координат
+							td.innerHTML = array[j];
+						} else if (i == 0 && 0 <= j <= 9) { // Первая буквенная строка координат
+							td.innerHTML = array[j];
+						} else if (i <= 8 && j == 0) {//Левый цифровой столбец
+							td.innerHTML = reverseNumber[i];
+						} else if (i <= 8 && j == 9) {//Правый цифровой столбец
+							td.innerHTML = reverseNumber[i];
+						} else if (i == 1 && 1 <= j && j < 9) {
 						td.innerHTML = chessPieceBlack[j];
 						//td.style.transform = 'rotate(180deg)';
 					} else if (i == 2 && 1 <= j && j < 9 ) {
