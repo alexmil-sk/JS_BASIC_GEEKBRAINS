@@ -25,8 +25,7 @@
 				var tr = document.createElement('tr');
 				table.append(tr);
 				for (var j = 0; j < 10; ++j) {
-					var td = document.createElement('td');					
-					//td.style.fontSize = '80px';
+					var td = document.createElement('td');
 					tr.append(td);
 					td.innerHTML = (i + 1) + j;
 
@@ -44,10 +43,8 @@
 						td.innerHTML = reverseNumber[i];
 					} else if (i == 1 && 1 <= j && j < 9) {
 						td.innerHTML = chessPieceBlack[j];
-						//td.style.transform = 'rotate(180deg)';
 					} else if (i == 2 && 1 <= j && j < 9 ) {
 						td.innerHTML = chessPawnBlack;
-						//td.style.transform = 'rotate(180deg)';
 					} else if (i == 7 && 1 <= j && j < 9) {
 						td.innerHTML = chessPawnWhite;
 						td.style.color = '#FAFAD2';
