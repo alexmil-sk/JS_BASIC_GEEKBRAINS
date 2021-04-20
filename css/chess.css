@@ -1,0 +1,27 @@
+.back-home {
+	width: 88px;
+	height: 28px;
+	display: block;
+	float: left;
+	margin: 20px;
+	padding: 15px;
+	font-size: 25px;
+	color: white;
+	border-radius: 20px;
+	background-color: #A52A2A;
+	box-shadow: 3px 3px 10px brown;
+	text-align: center;
+	text-decoration: none;
+}
+
+.back-home:hover {
+	background-color: #cc3636;
+	color: white;
+	box-shadow: 3px 3px 10px crimson;
+}
+
+.back-home:active {
+	background-color: #e18787;
+	color: white;
+	box-shadow: 0 0 20px #6e0f22;
+}
