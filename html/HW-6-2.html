@@ -184,6 +184,7 @@
 				elem.append(document.createTextNode('Цена: ' + toys[i].price + '\u20bd'));
 
 				elemBtn = document.createElement('button');
+				elemBtn.innerText = 'Купить';
 				elemBtn.classList.add('buyBtn');
 				elemBtn.setAttribute('id', 'b' + i);
 				elemBtn.onclick = addToys;
