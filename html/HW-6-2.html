@@ -99,9 +99,6 @@
 			border-top: 1px solid #000;
 			font-weight: bold;
 		}
-
-		
-
 		.buyBtn {
 			content: '';
 			width: 100px;
@@ -141,34 +138,34 @@
 
 	<script>
 		var good0 = {
-				title: 'Мягкая игрушка "Свинка"',
-				imageSrc: '../img/HW-6/HW-6-2/piggy.jpg',
-				price: 450,
+			title: 'Мягкая игрушка "Свинка"',
+			imageSrc: '../img/HW-6/HW-6-2/piggy.jpg',
+			price: 450,
+			count: 1,
+		};
+		var good1 = {
+			title: 'Мягкая игрушка "Щенок"',
+			imageSrc: '../img/HW-6/HW-6-2/puppy.jpg',
+			price: 380,
+			count: 1,
+		};
+		var good2 = {
+			title: 'Мягкая игрушка "Кошка"',
+			imageSrc: '../img/HW-6/HW-6-2/kitty.jpg',
+			price: 520,
+			count: 1,
+		};
+		var good3 = {
+				title: 'Мягкая игрушка "Совенок"',
+				imageSrc: '../img/HW-6/HW-6-2/owl.jpg',
+				price: 580,
 				count: 1,
 			};
-			var good1 = {
-				title: 'Мягкая игрушка "Щенок"',
-				imageSrc: '../img/HW-6/HW-6-2/puppy.jpg',
-				price: 380,
-				count: 1,
-			};
-			var good2 = {
-				title: 'Мягкая игрушка "Кошка"',
-				imageSrc: '../img/HW-6/HW-6-2/kitty.jpg',
-				price: 520,
-				count: 1,
-			};
-			var good3 = {
-					title: 'Мягкая игрушка "Совенок"',
-					imageSrc: '../img/HW-6/HW-6-2/owl.jpg',
-					price: 580,
-					count: 1,
-				};
 
-			var toys = [good0, good1, good2, good3];
+		var toys = [good0, good1, good2, good3];
 
-			var sumToys = 0;
-			var countToys = 0;
+		var sumToys = 0;
+		var countToys = 0;
 
 		function buy() {
 			var assortiment = document.querySelector('.assortiment');
@@ -184,6 +181,7 @@
 				elem.append(document.createTextNode('Цена: ' + toys[i].price + '\u20bd'));
 
 				elemBtn = document.createElement('button');
+				elemBtn.innerText = 'Купить';
 				elemBtn.classList.add('buyBtn');
 				elemBtn.setAttribute('id', 'b' + i);
 				elemBtn.onclick = addToys;
