@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Подключение файла JS скриптов -->
+	<script defer src="../js/script.js"></script>
+	<!-- Подключение jQuery -->
+	<script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<title>Домашнее задание №8</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<a href="../index.html" class="btn-home"><img src="../img/home.svg" alt=""></a>
+			<h1 class="h1-HW">Домашнее задание №8</h1>
+			<section сlass="section-HW">
+					<article class="article-HW">
+						<p>1. Для практикума из занятия 7 продумать, где можно применить замыкания.</p>
+						<p>2. Не выполняя кода, ответить, что выведет браузер и почему:</p>
+						<p>if (!("a" in window)) {<br>
+						var a = 1;<br>
+						}<br>
+						alert(a);</p>
+						<p>var b = function a(x) {<br>
+						x && a(--x);<br>
+						};<br>
+						alert(a);</p>
+						<p>function a(x) {<br>
+						return x * 2;<br>
+						}<br>
+						var a;<br>
+						alert(a);</p>
+						<p>function b(x, y, a) {<br>
+						arguments[2] = 10;<br>
+						alert(a);<br>
+						}<br>
+						b(1, 2, 3);</p>
+						<p>function a() {<br>
+						alert(this);<br>
+						}<br>
+						a.call(null);</p>
+					</article>
+			</section>
+			<h1 class="h1-HW">Решение</h1>
+			<!-- ! ЗАДАЧА №1 -->
+			<article class="article-HW">
+				<p class="bold">1. Для практикума из занятия 7 продумать, где можно применить замыкания.</p>			
+				
+				<button type="button" onclick="window.location.href= 'HW-8-1.html'" class="answerBtn">ПЕРЕЙТИ</button>
+				<p>Пояснения</p>
+				<p></p>
+			</article>
+			<!-- ! ЗАДАЧА №2 -->
+			<article class="article-HW">
+				<p class="bold">2. Не выполняя кода, ответить, что выведет браузер и почему:</p>
+				<p>if (!("a" in window)) {<br>
+					var a = 1;<br>
+					}<br>
+					alert(a);</p>
+				<p>var b = function a(x) {<br>
+					x && a(--x);<br>
+					};<br>
+					alert(a);</p>
+				<p>function a(x) {<br>
+					return x * 2;<br>
+					}<br>
+					var a;<br>
+					alert(a);</p>
+				<p>function b(x, y, a) {<br>
+					arguments[2] = 10;<br>
+					alert(a);<br>
+					}<br>
+					b(1, 2, 3);</p>
+				<p>function a() {<br>
+					alert(this);<br>
+					}<br>
+					a.call(null);</p>
+				<p>Пояснения</p>
+				<p></p>
+				<button type="button" onclick="window.location.href='HW-8-2.html'" class="answerBtn">ПЕРЕЙТИ</button>
+				<p>Пояснения</p>
+				<p></p>
+			</article>
+		</div>
+	</div>
+</body>
+</html>

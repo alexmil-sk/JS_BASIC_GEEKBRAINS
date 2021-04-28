@@ -169,10 +169,33 @@
 					</section>
 					<!-- ! -->
 					<section class="grid-section shadow">
-						<a href="#" target="_blank">
+						<a href="html/HW-8.html" target="_blank">
 							<h2>ДЗ-8</h2>
 							<article>
-								<p>Содержание</p>
+								<p>1. Для практикума из занятия 7 продумать, где можно применить замыкания.</p>
+								<p>2. Не выполняя кода, ответить, что выведет браузер и почему:</p>
+								<p>if (!("a" in window)) {<br>
+									var a = 1;<br>
+									}<br>
+									alert(a);</p>
+								<p>var b = function a(x) {<br>
+									x && a(--x);<br>
+									};<br>
+									alert(a);</p>
+								<p>function a(x) {<br>
+									return x * 2;<br>
+									}<br>
+									var a;<br>
+									alert(a);</p>
+								<p>function b(x, y, a) {<br>
+									arguments[2] = 10;<br>
+									alert(a);<br>
+									}<br>
+									b(1, 2, 3);</p>
+								<p>function a() {<br>
+									alert(this);<br>
+									}<br>
+									a.call(null);</p>
 							</article>
 						</a>
 					</section>
